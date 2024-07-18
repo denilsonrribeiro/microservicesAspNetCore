@@ -15,6 +15,7 @@ namespace StoreServices.Api.Books.Test
     {
         private IEnumerable<Book> GenerateFakeBookList()
         {
+            //Este método é para gerar dados com Genfu
             A.Configure<Book>()
                 .Fill(x => x.Title).AsArticleTitle()
                 .Fill(x => x.Id, () => { return Guid.NewGuid(); });
